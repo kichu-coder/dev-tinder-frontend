@@ -7,7 +7,11 @@ export const requestSlice = createSlice({
   initialState,
   reducers: {
     addRequest: (state, action) => {
+      
       return action.payload;
+    },
+    removeRequest: (state, action) => {
+      return state.filter((request) => request._id !== action.payload)
     },
     extraReducers: (builder) => {
       builder.addCase(logout, () => initialState);
@@ -16,6 +20,6 @@ export const requestSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { addRequest } = requestSlice.actions;
+export const { addRequest , removeRequest} = requestSlice.actions;
 
 export default requestSlice.reducer;

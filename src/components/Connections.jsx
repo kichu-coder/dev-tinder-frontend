@@ -24,14 +24,14 @@ const Connections = () => {
 
   if (!connections) return;
 
-  if (connections.length === 0) return <h1>No connectiosn found</h1>;
+  if (connections.length === 0) return <h1 className="flex justify-center my-10">No connections found</h1>;
 
   return (
     <div>
       <h1 className="font-bold text-center my-5 text-2xl">Connections</h1>
       {connections.map((connection) => {
         return (
-          <div key={connection._id} className="card card-side bg-base-100 shadow-sm h-30 w-1/2 mx-auto">
+          <div key={connection._id} className="card card-side bg-base-100 shadow-sm h-30 w-1/2 mx-auto my-5">
             <figure className="rounded-full">
               <img src={connection.photoUrl} alt={connection.firstName} />
             </figure>
