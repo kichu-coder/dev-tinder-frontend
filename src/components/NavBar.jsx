@@ -16,6 +16,7 @@ const NavBar = () => {
      console.log("logout")
      const res =  await api.post("auth/logout");
      dispatch(removeUser());
+     dispatch(removeUser());
      navigate("/login")
     }catch(err){
       console.log(err);
@@ -54,6 +55,9 @@ const NavBar = () => {
             </li>
             <li>
               <Link to="/connections">Connections</Link>
+            </li>
+             <li>
+              <Link to="/requests">Requests</Link>
             </li>
             <li>
               <Link onClick={handleLogout}>Logout</Link>

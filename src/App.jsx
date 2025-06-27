@@ -7,6 +7,7 @@ import Login from "./components/Login";
 import Profile from "./components/Profile";
 import Feed from "./components/Feed";
 import Connections from "./components/Connections";
+import Requests from "./components/Requests";
 
 function App() {
   const router = createBrowserRouter([
@@ -18,7 +19,7 @@ function App() {
         { path: "/login", element : <Login /> },
         { path: "/profile", element : <Profile /> },
         { path: "/connections", element : <Connections /> },
-        { path: "/requests", element : <Profile /> },
+        { path: "/requests", element : <Requests /> },
       ],
     },
   ]);

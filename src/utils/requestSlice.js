@@ -2,14 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = null;
 
-export const connectionSlice = createSlice({
-  name: "connection",
+export const requestSlice = createSlice({
+  name: "request",
   initialState,
   reducers: {
-    addConnections: (state, action) => {
+    addRequest: (state, action) => {
       return action.payload;
     },
-    removeConnections: (state, action) => null,
     extraReducers: (builder) => {
       builder.addCase(logout, () => initialState);
     },
@@ -17,6 +16,6 @@ export const connectionSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { addConnections, removeConnections } = connectionSlice.actions;
+export const { addRequest } = requestSlice.actions;
 
-export default connectionSlice.reducer;
+export default requestSlice.reducer;

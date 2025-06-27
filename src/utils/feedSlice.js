@@ -1,19 +1,22 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = null;
 
 export const feedSlice = createSlice({
-  name: 'feed',
+  name: "feed",
   initialState,
   reducers: {
     addFeed: (state, action) => {
-      return action.payload
+      return action.payload;
     },
     removeFeed: (state, action) => null,
+    extraReducers: (builder) => {
+      builder.addCase(logout, () => initialState);
+    },
   },
-})
+});
 
 // Action creators are generated for each case reducer function
-export const { addFeed } = feedSlice.actions
+export const { addFeed } = feedSlice.actions;
 
-export default feedSlice.reducer
+export default feedSlice.reducer;

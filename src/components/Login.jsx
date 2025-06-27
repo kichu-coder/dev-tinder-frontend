@@ -6,9 +6,9 @@ import { BASE_URL } from "../utils/constants";
 import api from "../utils/axios";
 
 const Login = () => {
-  const [email, setEmail] = useState("balaya@gmail.com");
+  const [email, setEmail] = useState("dhoni@gmail.com");
 
-  const [password, setPassword] = useState("Balaya@123");
+  const [password, setPassword] = useState("Dhoni@123");
 
   const [error, setError] = useState("");
 
