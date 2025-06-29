@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router";
 import api from "../utils/axios";
 import { removeUser } from "../utils/userSlice";
+import { logout } from "../utils/logoutSlice";
 
 const NavBar = () => {
   const user = useSelector((state) => state.user);
@@ -16,7 +17,7 @@ const NavBar = () => {
      console.log("logout")
      const res =  await api.post("auth/logout");
      dispatch(removeUser());
-     dispatch(removeUser());
+     dispatch(logout());
      navigate("/login")
     }catch(err){
       console.log(err);

@@ -8,8 +8,6 @@ const Requests = () => {
 
   const requests = useSelector((store) => store.request);
 
-  console.log(requests)
-
   const reviewRequest = async (status, _id) => {
     try {
       const response = await api.post("request/review/" + status + "/" + _id);
